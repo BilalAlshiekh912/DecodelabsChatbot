@@ -39,6 +39,13 @@ def handle_name():
         
     return True
 
+def handle_weather():
+
+    type_print("It's always sunny and hot where I live, but I hope the weather is nice where you are!")
+
+    return True
+
+
 def handle_exit():
     
     type_print("You're leaving that early? such a Boomer")
@@ -54,7 +61,8 @@ def handle_unknown():
 intent_map = {
     ("how are you", "how are you doing", "how's it going"): handle_greeting,
     ("what's your name","whats your name","what is your name"): handle_name, 
-    ("bye", "goodbye", "see you later"): handle_exit
+    ("bye", "goodbye", "see you later"): handle_exit,
+    ("weather", "temperature", "raining"): handle_weather
 }
 
 type_print(random.choice(initiate_chat))
